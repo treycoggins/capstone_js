@@ -10,11 +10,12 @@
   <script src="../node_modules/feather-icons/dist/feather.js"></script>
 </head>
 
-<body class="grid-cols-12 bg-orange-100 font-sans">
+<body id="body" class="bg-orange-100 font-sans">
+  <div id="overlay" class="overlay"></div>
   <header class="flex flex-col justify-between bg-teal-200 border-b-2 border-orange-400">
     <div class="flex justify-between px-3 pt-3">
       <div class="flex">
-        <div class="flex flex-col px-2 hamburger">
+        <div id="hamburger" class="flex flex-col px-2">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -25,13 +26,32 @@
         <div class="flex">
           <p class="self-center text-sm">Sign in ></p>
           <i data-feather="user"></i>
-          <i data-feather="shopping-cart"></i>
+          <div class="flex flex-col">
+            <p class="shopping-count">0</p>
+            <i data-feather="shopping-cart"></i>
+          </div>
         </div>
     </div>
     <div class="p-3">
       <input class="rounded-md bg-orange-50 p-1 w-full" type="text" name="main-search" placeholder="What are you looking for?">
     </div>
   </header>
+
+  <nav id="nav" class="bg-slate-400">
+    <div class="navMenu-close">
+      <i id="navMenu-close" data-feather="x"></i>
+    </div>
+    <div class="flex justify-between bg-slate-700 text-white">
+      <div class="">
+        Browse OmniShop
+      </div>
+      <div class="flex">
+        <p class="self-center text-sm">Sign in</p>
+        <i data-feather="user"></i>
+      </div>
+    </div>
+
+  </nav>
 
   <main class="min-h-lvh">
     
@@ -50,7 +70,7 @@
   <script>
     feather.replace();
   </script>
-  
+  <script src="index.js"></script>
 </body>
 
 </html>

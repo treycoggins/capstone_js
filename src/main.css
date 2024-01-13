@@ -2,8 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+.overlay {
+  background-color: rgb(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.overlay-open {
+  display: block;
+}
+
+.navMenu-close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+}
+
 svg {
   margin: 10px;
+}
+
+svg.feather-x {
+  stroke: white;
+}
+
+.shopping-count {
+  position: absolute;
+  top: 5px;
+  right: 26px;
+  color: red;
+  font-weight: bold;
 }
 
 .hamburger {
@@ -18,4 +51,18 @@ svg {
   background-color: #ffedd5;
   margin: 3px;
   border-radius: 20px;
+}
+
+nav {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.nav-open {
+  display: block;
+  z-index: 1;
 }

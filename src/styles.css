@@ -548,24 +548,6 @@ video {
   display: flex;
 }
 
-.table {
-  display: table;
-}
-
-.max-h-screen {
-  max-height: 100vh;
-}
-
-.max-h-fit {
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-}
-
-.min-h-fit {
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-}
-
 .min-h-lvh {
   min-height: 100lvh;
 }
@@ -574,20 +556,12 @@ video {
   width: 100%;
 }
 
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
 
 .justify-between {
   justify-content: space-between;
-}
-
-.self-end {
-  align-self: flex-end;
 }
 
 .self-center {
@@ -600,10 +574,6 @@ video {
 
 .border-b-2 {
   border-bottom-width: 2px;
-}
-
-.border-t {
-  border-top-width: 1px;
 }
 
 .border-t-2 {
@@ -623,6 +593,16 @@ video {
 .bg-orange-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 247 237 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .bg-teal-200 {
@@ -648,20 +628,8 @@ video {
   padding-right: 0.75rem;
 }
 
-.pe-2 {
-  padding-inline-end: 0.5rem;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
-}
-
-.align-bottom {
-  vertical-align: bottom;
-}
-
-.align-text-bottom {
-  vertical-align: text-bottom;
 }
 
 .font-sans {
@@ -682,8 +650,46 @@ video {
   color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.overlay {
+  background-color: rgb(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.overlay-open {
+  display: block;
+}
+
+.navMenu-close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+}
+
 svg {
   margin: 10px;
+}
+
+svg.feather-x {
+  stroke: white;
+}
+
+.shopping-count {
+  position: absolute;
+  top: 5px;
+  right: 26px;
+  color: red;
+  font-weight: bold;
 }
 
 .hamburger {
@@ -698,4 +704,18 @@ svg {
   background-color: #ffedd5;
   margin: 3px;
   border-radius: 20px;
+}
+
+nav {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.nav-open {
+  display: block;
+  z-index: 1;
 }
