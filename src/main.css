@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg {
+  margin: 10px;
+}
+
+.hamburger {
+  top: 0;
+  left: 0;
+}
+
+.bar {
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: #ffedd5;
+  margin: 3px;
+  border-radius: 20px;
+}
