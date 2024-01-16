@@ -16,3 +16,11 @@ navMenuClose.addEventListener('click', () => {
   navPane.classList.add('nav-close');
   mainBody.classList.remove('overlay-open');
 })
+
+const findItems = () => {
+  const item = document.getElementById('main-search-field').value;
+  const htmlOutput = `<p>Search results for ${item}:</p>`;
+
+
+  document.getElementById('search-output').innerHTML = htmlOutput;
+}

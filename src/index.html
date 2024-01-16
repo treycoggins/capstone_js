@@ -17,7 +17,7 @@
     </div>
   </div>
   <header class="flex flex-col justify-between bg-teal-200 border-b-2 border-orange-400">
-    <div class="flex justify-between px-3 pt-3">
+    <div class="flex justify-between pt-3">
       <div class="flex">
         <div id="hamburger" class="flex flex-col px-2">
           <div class="bar"></div>
@@ -28,23 +28,24 @@
           <h1 class="text-orange-400 font-bold">OmniShop</h1></div>
         </div>
         <div class="flex">
-          <p class="self-center text-sm">Sign in ></p>
-          <i data-feather="user"></i>
-          <div class="flex flex-col">
+          <p class="self-center m-4 text-sm">Sign in</p>
+          <i data-feather="user" class="self-center"></i>
+          <div class="flex flex-col self-center">
             <p class="shopping-count">0</p>
-            <i data-feather="shopping-cart"></i>
+            <i data-feather="shopping-cart" class=""></i>
           </div>
         </div>
     </div>
-    <div class="p-3">
-      <input class="rounded-md bg-orange-50 p-1 w-full" type="text" name="main-search" placeholder="What are you looking for?">
+    <div id="main-search-container" class="py-3">
+      <input class="rounded-md bg-orange-50 ms-4 p-2 w-11/12" type="text" id="main-search-field" name="main-search-field"  placeholder="What are you looking for?">
+      <button type="submit" onclick="findItems()" class=""><i data-feather="search"></i></button>
     </div>
   </header>
 
   <nav id="nav" class="bg-slate-200 flex">
     <div class="flex flex-col py-4 bg-slate-700 text-white">
-      <div class="flex justify-end">
-        <p class="self-center text-sm">Sign in</p>
+      <div class="user-login flex justify-end">
+        <p class="self-center text-sm pe-2">Sign in</p>
         <i data-feather="user"></i>
       </div>
       <div class="p-4">
@@ -56,7 +57,7 @@
 
   <main class="min-h-lvh">
     
-    
+    <div id="search-output" class="text-lg text-orange-400"></div>
 
   </main>
 
