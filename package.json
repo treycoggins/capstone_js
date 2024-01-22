@@ -1,8 +1,11 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.4.1"
-  },
-  "dependencies": {
-    "feather-icons": "^4.29.1"
-  }
+	"devDependencies": {
+		"tailwindcss": "^3.4.1"
+	},
+	"dependencies": {
+		"feather-icons": "^4.29.1"
+	},
+	"scripts": {
+		"build": "tailwindcss build -i ./src/main.css -o ./public/styles.css --watch"
+	}
 }

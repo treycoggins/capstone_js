@@ -21,18 +21,18 @@ html {
   display: block;
 }
 
-svg.feather-shopping-cart {
+#shopping-cart {
   margin: 10px;
 }
 
-svg.feather-x {
+#navMenu-close {
   stroke: white;
   position: fixed;
   top: 40px;
   right: 40px;
 }
 
-svg.feather-search {
+#search-tool {
   stroke: gray;
   position: absolute;
   margin: 10px;
@@ -54,7 +54,7 @@ svg.feather-search {
 .shopping-count {
   position: absolute;
   top: 8px;
-  right: 15px;
+  right: 14px;
   color: red;
   font-weight: bold;
 }

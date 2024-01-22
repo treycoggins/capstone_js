@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../public/styles.css">
   <title>OmniShop Online</title>
 
   <script src="../node_modules/feather-icons/dist/feather.js"></script>
@@ -25,27 +25,32 @@
           <div class="bar"></div>
         </div>
         <div class="flex">
-          <h1 class="text-orange-400 font-bold">OmniShop</h1></div>
+          <a href="index.html"><h1 class="text-orange-400 font-bold">OmniShop</h1></a>
         </div>
+      </div>
+      <div>
         <div class="flex">
-          <p class="self-center m-4 text-sm">Sign in</p>
-          <i data-feather="user" class="self-center"></i>
+          <a href="signin.html">
+            <p class="self-center py-4 px-1 text-sm">Sign in &#8594;</i></p>
+          </a>
+          <a href="signin.html"></a><i id="user" data-feather="user" class="self-center pe-1"></i></a>
           <div class="flex flex-col self-center">
             <p class="shopping-count">0</p>
-            <i data-feather="shopping-cart" class=""></i>
+            <i id="shopping-cart" data-feather="shopping-cart" class=""></i>
           </div>
         </div>
+      </div>
     </div>
     <div id="main-search-container" class="py-3">
       <input class="rounded-md bg-orange-50 ms-4 p-2 w-11/12" type="text" id="main-search-field" name="main-search-field"  placeholder="What are you looking for?">
-      <button type="submit" onclick="findItems()" class=""><i data-feather="search"></i></button>
+      <button type="submit" onclick="findItems()" class=""><i id="search-tool" data-feather="search"></i></button>
     </div>
   </header>
 
   <nav id="nav" class="bg-slate-200 flex">
     <div class="flex flex-col py-4 bg-slate-700 text-white">
       <div class="user-login flex justify-end">
-        <p class="self-center text-sm pe-2">Sign in</p>
+        <a href="signin.html"><p class="self-center text-sm pe-2">Sign in</p></a>
         <i data-feather="user"></i>
       </div>
       <div class="p-4">
@@ -62,7 +67,7 @@
   </main>
 
 
-  <footer class="bg-teal-200 border-t-2 border-orange-400">
+  <footer class="bg-teal-200 border-t-2 border-orange-400 text-xs">
     <p>Your Orders</p>
     <p>Your Account</p>
     <p>Your List</p>

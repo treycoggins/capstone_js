@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/styles.css">
+  <title>OmniShop Sign-In</title>
+
+  <script src="../node_modules/feather-icons/dist/feather.js"></script>
+</head>
+
+<body id="body" class="bg-orange-100 font-sans">
+  <div id="overlay" class="overlay">
+    <div class="navMenu-close">
+      <i id="navMenu-close" data-feather="x"></i>
+    </div>
+  </div>
+
+  <header class="bg-teal-200 border-b-2 border-orange-400">
+    <div>
+      <a href="index.html">
+        <h1 class="text-orange-400 font-bold text-2xl p-4">OmniShop</h1>
+      </a>
+    </div>
+  </header>
+
+  <main class="bg-orange-100 text-teal-400 m-2 flex flex-col">
+    <h2 class="text-teal-400 text-2xl basis-full grow shrink-0 py-4 ps-3">Welcome</h2>
+    <section id="section-create" class="self-center border-gray-700 border border-b-0 w-11/12 p-2 flex">
+      <i data-feather="chevrons-down" class="m-2"></i>
+      <div class="">
+        <small class="text-slate-600">New to OmniShop?</small>
+        <p class="font-bold">Create an Account.</p>
+      </div>
+      
+    </section>
+    <section id="section-signin" class="self-center border-gray-700 border w-11/12 p-2">
+      <p class="font-bold">Sign In. Already a shopper?</p>
+      <label for="user">Username or email address</label>
+      <input name="user" type="text" class="rounded-md text-gray-700 border-teal-200 border-2 w-11/12 mt-2 p-2">
+      <button class="bg-orange-400 p-2 border border-teal-400 text-orange-100 w-11/12 mt-2">Continue</button>
+    </section>
+  </main>
+
+  <footer class="bg-teal-200 border-t-2 border-orange-400 text-xs">
+    <p>Your Orders</p>
+    <p>Your Account</p>
+    <p>Your List</p>
+  </footer>
+
+
+  <script>
+    feather.replace();
+  </script>
+  <script src="signup.js"></script>
+</body>
+
+</html>
