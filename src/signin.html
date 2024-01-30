@@ -5,45 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../public/styles.css">
-  <title>OmniShop Sign-In</title>
+  <title>BitBuggy - Sign-In</title>
 
   <script src="../node_modules/feather-icons/dist/feather.js"></script>
 </head>
 
-<body id="body" class="bg-orange-100 font-sans">
+<body id="body" class="bg-violet-200 font-sans">
   <div id="overlay" class="overlay">
     <div class="navMenu-close">
       <i id="navMenu-close" data-feather="x"></i>
     </div>
   </div>
 
-  <header class="bg-teal-200 border-b-2 border-orange-400">
-    <div>
-      <a href="index.html">
-        <h1 class="text-orange-400 font-bold text-2xl p-4">OmniShop</h1>
-      </a>
+  <header class="bg-indigo-400 border-b-2 border-black">
+    <div class="flex">
+      <a class="flex items-center ms-2" href="index.html"><i class="size-8 align-middle" data-feather="arrow-left"></i></a>
+      <a href="index.html"><h1 class="font-bold text-xl my-4 me-4 ms-2">BitBuggy</h1></a>
     </div>
   </header>
 
-  <main class="bg-orange-100 text-teal-400 m-2 flex flex-col">
-    <h2 class="text-teal-400 text-2xl basis-full grow shrink-0 py-4 ps-3">Welcome</h2>
-    <section id="section-create" class="self-center border-gray-700 border border-b-0 w-11/12 p-2 flex">
-      <i data-feather="chevrons-down" class="m-2"></i>
-      <div class="">
-        <small class="text-slate-600">New to OmniShop?</small>
-        <p class="font-bold">Create an Account.</p>
+  <main class="bg-violet-200 m-2 flex flex-col">
+    <h2 class="text-2xl basis-full grow shrink-0 py-4 ps-3">Welcome</h2>
+    <section id="section-create" class="self-center border-black border border-b-0 w-11/12 p-2 flex flex-col">
+      <div class="flex">
+        <i data-feather="chevrons-down" class="m-2"></i>
+        <div class="">
+          <small class="text-slate-600">New to BitBuggy?</small>
+          <p class="font-bold">Create an Account.</p>
+        </div>
       </div>
-      
+      <form id="signup-form" class="hidden flex-col my-4" action="#" method="POST">
+        <label class="mt-2 ms-4" for="first-name">First Name</label>
+        <input id="first-name" type="text" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+        <label class="mt-2 ms-4" for="last-name">Last Name</label>
+        <input id="last-name" type="text" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+        <label class="mt-2 ms-4" for="email">Email Address</label>
+        <input id="email" type="email" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+        <label class="mt-2 ms-4" for="username">Username</label>
+        <input id="username" type="text" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+        <label class="mt-2 ms-4" for="password">Password</label>
+        <input id="password" type="password" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+        <label class="mt-2 ms-4" for="confirm-password">Confirm Password</label>
+        <input id="confirm-password" type="password" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+        <button class="bg-indigo-300 self-center p-2 border w-11/12 mt-4">Submit</button>
+      </form>
     </section>
-    <section id="section-signin" class="self-center border-gray-700 border w-11/12 p-2">
-      <p class="font-bold">Sign In. Already a shopper?</p>
-      <label for="user">Username or email address</label>
-      <input name="user" type="text" class="rounded-md text-gray-700 border-teal-200 border-2 w-11/12 mt-2 p-2">
-      <button class="bg-orange-400 p-2 border border-teal-400 text-orange-100 w-11/12 mt-2">Continue</button>
+    <section id="section-signin" class="self-center border-black border w-11/12 p-2">
+      <div class="flex">
+        <i data-feather="chevrons-down" class="m-2"></i>
+        <div class="">
+          <small class="text-slate-600">Already a customer?</small>
+          <p class="font-bold">Sign in.</p>
+        </div>
+      </div>
+      <div id="signin-form" class="hidden flex-col">
+        <label for="user">Username or email address</label>
+        <form class="flex flex-col" action="#" method="POST">
+          <input name="user" type="text" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 mt-2 p-2">
+          <button class="bg-indigo-300 self-center p-2 border w-11/12 mt-2">Continue</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="bg-teal-200 border-t-2 border-orange-400 text-xs">
+  <footer class="bg-violet-200 border-t-2 border-black text-xs">
     <p>Your Orders</p>
     <p>Your Account</p>
     <p>Your List</p>
