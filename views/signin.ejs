@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../public/styles.css">
-  <title>BitBuggy - Sign-In</title>
-
-  <script src="../node_modules/feather-icons/dist/feather.js"></script>
-</head>
-
+<%- include('partials/head.ejs') %>
 <body id="body" class="bg-violet-200 font-sans">
   <div id="overlay" class="overlay">
     <div class="navMenu-close">
@@ -19,8 +8,8 @@
 
   <header class="bg-indigo-400 border-b-2 border-black">
     <div class="flex">
-      <a class="flex items-center ms-2" href="index.html"><i class="size-8 align-middle" data-feather="arrow-left"></i></a>
-      <a href="index.html"><h1 class="font-bold text-xl my-4 me-4 ms-2">BitBuggy</h1></a>
+      <a class="flex items-center ms-2" href="/"><i class="size-8 align-middle" data-feather="arrow-left"></i></a>
+      <a href="/"><h1 class="font-bold text-xl my-4 me-4 ms-2">BitBuggy</h1></a>
     </div>
   </header>
 
@@ -67,18 +56,14 @@
       </div>
     </section>
   </main>
-
-  <footer class="bg-violet-200 border-t-2 border-black text-xs">
-    <p>Your Orders</p>
-    <p>Your Account</p>
-    <p>Your List</p>
-  </footer>
+  <%- include('partials/footer.ejs') %>
 
 
+  
   <script>
     feather.replace();
   </script>
-  <script src="signup.js"></script>
-</body>
-
-</html>
+  <script src="/js/signup.js"></script>
+  </body>
+  
+  </html>
