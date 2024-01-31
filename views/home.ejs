@@ -30,10 +30,10 @@
         </div>
       </div>
     </div>
-    <div id="main-search-container" class="py-3">
+    <form id="main-search-container" class="py-3" action="/products" method="GET">
       <input class="rounded-md bg-indigo-50 ms-4 p-2 w-11/12" type="text" id="main-search-field" name="main-search-field"  placeholder="What are you looking for?">
       <button type="submit" onclick="findItems()" class=""><i id="search-tool" data-feather="search"></i></button>
-    </div>
+    </form>
   </header>
 
   <nav id="nav" class="bg-slate-200 flex">
