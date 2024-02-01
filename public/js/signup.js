@@ -1,12 +1,11 @@
-const createSection = document.getElementById("section-create");
-const signinSection = document.getElementById("section-signin");
+const signupDropDown = document.getElementById("signup-dropdown");
+const signinDropDown = document.getElementById("signin-dropdown");
 const signupForm = document.getElementById("signup-form");
 const signinForm = document.getElementById("signin-form");
 
-
-createSection.addEventListener("click", () => {
-	signupForm.classList.toggle('show-form');
+signupDropDown.addEventListener("click", () => {
+	signupForm.classList.toggle("show-form");
 });
-signinSection.addEventListener("click", () => {
-	signinForm.classList.toggle('show-form');
+signinDropDown.addEventListener("click", () => {
+	signinForm.classList.toggle("show-form");
 });
