@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+
+:root {
+  --primary-light: #38785d;
+  --primary: #175442;
+  --primary-medium: #06543c;
+  --primary-dark: #063427;
+  --secondary-light: #c4a15d;
+  --secondary-dark: #af8c4a;
+}
+
+body {
   overflow-x: hidden;
+  color: var(--secondary-dark);
 }
 
 .overlay {
@@ -32,14 +43,14 @@ html {
 }
 
 #navMenu-close {
-  stroke: white;
+  stroke: var(--secondary-light);
   position: fixed;
   top: 40px;
   right: 40px;
 }
 
 #search-tool {
-  stroke: gray;
+  stroke: var(--primary-dark);
   position: absolute;
   margin: 10px;
   top: 30%;
@@ -61,7 +72,7 @@ html {
   position: absolute;
   top: 8px;
   right: 14px;
-  color: #fff;
+  color: darkred;
   font-weight: bold;
 }
 
@@ -78,7 +89,7 @@ html {
   display: block;
   height: 4px;
   width: 30px;
-  background-color: #000;
+  background-color: var(--primary);
   margin: 3px;
   border-radius: 20px;
 }

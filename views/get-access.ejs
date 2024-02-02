@@ -1,13 +1,13 @@
 <%- include('partials/head.ejs') %>
 
-  <body id="body" class="bg-violet-200 font-sans">
+  <body id="body" class="bg-primary font-sans">
     <div id="overlay" class="overlay">
       <div class="navMenu-close">
         <i id="navMenu-close" data-feather="x"></i>
       </div>
     </div>
 
-    <header class="bg-indigo-400 border-b-2 border-black">
+    <header class="bg-primary-dark border-b-2 border-secondary-dark">
       <div class="flex">
         <a class="flex items-center ms-2" href="/"><i class="size-8 align-middle" data-feather="arrow-left"></i></a>
         <a href="/">
@@ -16,43 +16,43 @@
       </div>
     </header>
 
-    <main class="bg-violet-200 m-2 flex flex-col">
+    <main class="bg-primary m-2 flex flex-col">
       <h2 class="text-2xl basis-full grow shrink-0 py-4 ps-3">Welcome</h2>
-      <section id="section-signup" class="self-center border-black border border-b-0 w-11/12 p-2 flex flex-col">
+      <section id="section-signup" class="self-center border-secondary-dark border border-b-0 w-11/12 p-2 flex flex-col">
         <div id="signup-dropdown" class="flex cursor-pointer">
           <i data-feather="chevrons-down" class="m-2"></i>
           <div class="">
-            <small class="text-slate-600">New to BitBuggy?</small>
-            <p class="font-bold">Create an Account.</p>
+            <small class="text-secondary-dark">New to BitBuggy?</small>
+            <p class="font-bold text-primary-dark">Create an Account.</p>
           </div>
         </div>
         <form id="signup-form" class="hidden flex-col my-4" action="/signup" method="POST">
           <label class="mt-2 ms-4" for="first_name">First Name</label>
-          <input id="first_name" type="text"
+          <input id="first_name" name="first_name" type="text"
             class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
           <label class="mt-2 ms-4" for="last_name">Last Name</label>
-          <input id="last_name" type="text"
+          <input id="last_name" name="last_name" type="text"
             class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
           <label class="mt-2 ms-4" for="email">Email Address</label>
-          <input id="email" type="email" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+          <input id="email" name="email" type="email" class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
           <label class="mt-2 ms-4" for="username">Username</label>
-          <input id="username" type="text"
+          <input id="username" name="username" type="text"
             class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
           <label class="mt-2 ms-4" for="create_password">Password</label>
-          <input id="create_password" type="password"
+          <input id="create_password" name="create_password" type="password"
             class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
           <label class="mt-2 ms-4" for="confirm_password">Confirm Password</label>
-          <input id="confirm_password" type="password"
+          <input id="confirm_password" name="confirm_password" type="password"
             class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <button class="bg-indigo-300 self-center p-2 border w-11/12 mt-4">Submit</button>
+          <button type="submit" name="submit-btn" class="bg-secondary-light text-primary-dark self-center p-2 border-none w-11/12 mt-4">Submit</button>
         </form>
       </section>
-      <section id="section-signin" class="self-center border-black border w-11/12 p-2">
+      <section id="section-signin" class="self-center border-secondary-dark border w-11/12 p-2">
         <div id="signin-dropdown" class="flex">
           <i data-feather="chevrons-down" class="m-2"></i>
           <div class="">
-            <small class="text-slate-600">Already a customer?</small>
-            <p class="font-bold">Sign in.</p>
+            <small class="text-secondary-dark">Already a customer?</small>
+            <p class="font-bold text-primary-dark">Sign in.</p>
           </div>
         </div>
         <div id="signin-form" class="hidden flex-col">
@@ -64,7 +64,7 @@
             <input type="password" id="password" name="password"
               class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
             <button type="submit" name="submit-btn"
-              class="bg-indigo-300 self-center p-2 border w-11/12 mt-2">Continue</button>
+              class="bg-secondary-light text-primary-dark self-center p-2 border-none w-11/12 mt-2">Continue</button>
           </form>
         </div>
       </section>

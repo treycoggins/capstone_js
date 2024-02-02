@@ -544,6 +544,18 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -587,6 +599,10 @@ video {
   margin-top: 1rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -623,6 +639,14 @@ video {
 
 .basis-full {
   flex-basis: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -669,44 +693,43 @@ video {
   border-top-width: 2px;
 }
 
+.border-none {
+  border-style: none;
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.bg-indigo-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(165 180 252 / var(--tw-bg-opacity));
+.border-secondary-dark {
+  --tw-border-opacity: 1;
+  border-color: rgb(175 140 74 / var(--tw-border-opacity));
 }
 
-.bg-indigo-400 {
+.bg-orange-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
+  background-color: rgb(255 247 237 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-50 {
+.bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+  background-color: rgb(23 84 66 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-500 {
+.bg-primary-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+  background-color: rgb(6 52 39 / var(--tw-bg-opacity));
 }
 
-.bg-slate-200 {
+.bg-secondary-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: rgb(175 140 74 / var(--tw-bg-opacity));
 }
 
-.bg-slate-700 {
+.bg-secondary-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
-
-.bg-violet-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
+  background-color: rgb(196 161 93 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -799,18 +822,41 @@ video {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-.text-slate-600 {
+.text-primary {
   --tw-text-opacity: 1;
-  color: rgb(71 85 105 / var(--tw-text-opacity));
+  color: rgb(23 84 66 / var(--tw-text-opacity));
 }
 
-.text-white {
+.text-primary-dark {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(6 52 39 / var(--tw-text-opacity));
 }
 
-html {
+.text-secondary-dark {
+  --tw-text-opacity: 1;
+  color: rgb(175 140 74 / var(--tw-text-opacity));
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+:root {
+  --primary-light: #38785d;
+  --primary: #175442;
+  --primary-medium: #06543c;
+  --primary-dark: #063427;
+  --secondary-light: #c4a15d;
+  --secondary-dark: #af8c4a;
+}
+
+body {
   overflow-x: hidden;
+  color: var(--secondary-dark);
 }
 
 .overlay {
@@ -844,14 +890,14 @@ html {
 }
 
 #navMenu-close {
-  stroke: white;
+  stroke: var(--secondary-light);
   position: fixed;
   top: 40px;
   right: 40px;
 }
 
 #search-tool {
-  stroke: gray;
+  stroke: var(--primary-dark);
   position: absolute;
   margin: 10px;
   top: 30%;
@@ -873,7 +919,7 @@ html {
   position: absolute;
   top: 8px;
   right: 14px;
-  color: #fff;
+  color: darkred;
   font-weight: bold;
 }
 
@@ -890,7 +936,7 @@ html {
   display: block;
   height: 4px;
   width: 30px;
-  background-color: #000;
+  background-color: var(--primary);
   margin: 3px;
   border-radius: 20px;
 }

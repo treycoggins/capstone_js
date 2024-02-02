@@ -1,79 +1,85 @@
 <%- include('partials/head.ejs') %>
-<body id="body" class="bg-violet-200 font-sans">
-  <div id="overlay" class="overlay">
-    <div class="navMenu-close">
-      <i id="navMenu-close" data-feather="x"></i>
-    </div>
-  </div>
-  <header class="flex flex-col justify-between bg-indigo-400 border-b-2 border-black">
-    <div class="flex justify-between pt-3">
-      <div class="flex">
-        <div id="hamburger" class="flex flex-col px-2">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div class="flex">
-          <a href="/"><h1 class="font-bold">BitBuggy</h1></a>
-        </div>
+
+  <body id="body" class="bg-primary font-sans">
+    <div id="overlay" class="overlay">
+      <div class="navMenu-close">
+        <i id="navMenu-close" data-feather="x"></i>
       </div>
-      <div>
+    </div>
+    <header class="flex flex-col justify-between bg-primary-dark border-b-2 border-secondary-dark">
+      <div class="flex justify-between pt-3">
         <div class="flex">
-          <a href="/get_access">
-            <p class="self-center py-4 px-1 text-sm">Sign in &#8594;</i></p>
-          </a>
-          <a href="/get_access" class="self-center"><i id="user" data-feather="user" class="pe-1"></i></a>
-          <div id="shopping-icon" class="flex flex-col self-center">
-            <p class="shopping-count">0</p>
-            <i id="shopping-cart" data-feather="shopping-cart" class=""></i>
+          <div id="hamburger" class="flex flex-col px-2">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="flex">
+            <a href="/">
+              <h1 class="font-bold">BitBuggy</h1>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="flex">
+            <a href="/get-access">
+              <p class="self-center py-4 px-1 text-sm">Sign in &#8594;</i></p>
+            </a>
+            <a href="/get-access" class="self-center"><i id="user" data-feather="user" class="pe-1"></i></a>
+            <div id="shopping-icon" class="flex flex-col self-center">
+              <p class="shopping-count">0</p>
+              <i id="shopping-cart" data-feather="shopping-cart" class=""></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <form id="main-search-container" class="py-3" action="/products" method="GET">
-      <input class="rounded-md bg-indigo-50 ms-4 p-2 w-11/12" type="text" id="main-search-field" name="main-search-field"  placeholder="What are you looking for?">
-      <button type="submit" onclick="findItems()" class=""><i id="search-tool" data-feather="search"></i></button>
-    </form>
-  </header>
+      <form id="main-search-container" class="py-3" action="/products" method="GET">
+        <input class="rounded-md bg-orange-50 ms-4 p-2 w-11/12" type="text" id="main-search-field"
+          name="main-search-field" placeholder="What are you looking for?">
+        <button type="submit" onclick="findItems()" class=""><i id="search-tool" data-feather="search"></i></button>
+      </form>
+    </header>
 
-  <nav id="nav" class="bg-slate-200 flex">
-    <div class="flex flex-col py-4 bg-slate-700 text-white">
-      <div class="user-login flex justify-end">
-        <a href="/get_access"><p class="self-center text-sm pe-2">Sign in</p></a>
-        <i data-feather="user"></i>
+    <nav id="nav" class="bg-secondary-dark flex">
+      <div class="flex flex-col py-4 bg-secondary-light text-primary">
+        <div class="user-login flex justify-end">
+          <a href="/get-access">
+            <p class="self-center text-sm pe-2">Sign in</p>
+          </a>
+          <i data-feather="user"></i>
+        </div>
+        <div class="p-4">
+          <p>Browse</p>
+          <p><strong>BitBuggy</strong></p>
+        </div>
       </div>
-      <div class="p-4">
-        <p>Browse</p>
-        <p><strong>BitBuggy</strong></p>
-      </div>
-    </div>
-    <ul class="nav-links mx-4">
-      <li class="nav-link-item flex m-4">
-        <a href="/"></a><i class="size-5 mx-2" data-feather="home"></i>Home</a>
-      </li>
-      <li class="nav-link-item flex m-4">
-        <a href="/products"></a><i class="size-5 mx-2" data-feather="package"></i>Products</a>
-      </li>
-      <li class="nav-link-item flex m-4">
-        <a href="/get_access"></a><i class="size-5 mx-2" data-feather="user-check"></i>Become a Member</a>
-      </li>
-    </ul>
-  </nav>
+      <ul class="nav-links mx-4 text-primary">
+        <li class="nav-link-item flex m-4">
+          <a href="/"></a><i class="size-5 mx-2" data-feather="home"></i>Home</a>
+        </li>
+        <li class="nav-link-item flex m-4">
+          <a href="/products"></a><i class="size-5 mx-2" data-feather="package"></i>Products</a>
+        </li>
+        <li class="nav-link-item flex m-4">
+          <a href="/get-access"></a><i class="size-5 mx-2" data-feather="user-check"></i>Become a Member</a>
+        </li>
+      </ul>
+    </nav>
 
-  <main class="min-h-lvh">
-    
-    <div id="search-output" class="text-lg"></div>
+    <main class="min-h-lvh">
 
-  </main>
+      <div id="search-output" class="text-lg"></div>
+
+    </main>
 
 
-  <%- include('partials/footer.ejs') %>
-  
-  
-  <script>
-    feather.replace();
-  </script>
-  <script src="/js/home.js"></script>
-</body>
+    <%- include('partials/footer.ejs') %>
 
-</html>
+
+      <script>
+        feather.replace();
+      </script>
+      <script src="/js/home.js"></script>
+  </body>
+
+  </html>
