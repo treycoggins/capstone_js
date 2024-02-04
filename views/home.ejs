@@ -7,37 +7,35 @@
       </div>
     </div>
     <header class="flex flex-col justify-between bg-primary-dark border-b-2 border-secondary-dark">
-      <div class="flex justify-between pt-3">
-        <div class="flex">
-          <div id="hamburger" class="flex flex-col px-2">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+      <div class="flex flex-col pt-3">
+        <div class="flex justify-between">
+          <div>
+            <div id="hamburger" class="flex flex-col px-2">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
           </div>
-          <div class="flex">
+          <div class="m-auto">
             <a href="/">
-              <h1 class="font-bold">BitBuggy</h1>
+              <img id="logo" src="../public/img/logo.png" alt="BitBuggy Logo" />
             </a>
           </div>
-        </div>
-        <div>
-          <div class="flex">
-            <a href="/get-access">
-              <p class="self-center py-4 px-1 text-sm">Sign in &#8594;</i></p>
-            </a>
-            <a href="/get-access" class="self-center"><i id="user" data-feather="user" class="pe-1"></i></a>
-            <div id="shopping-icon" class="flex flex-col self-center">
-              <p class="shopping-count">0</p>
-              <i id="shopping-cart" data-feather="shopping-cart" class=""></i>
+          <div id="main-nav-menu-items" class="flex justify-center items-end">
+            <div id="user" class="self-center">
+              <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-10 pe-1"></i></a>
+            </div>
+            <div id="shopping-icon" class="flex flex-col">
+              <p id="shopping-count" class="md:text-xl">0</p>
+              <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-10"></i>
             </div>
           </div>
         </div>
-      </div>
-      <form id="main-search-container" class="py-3" action="/products" method="GET">
-        <input class="rounded-md bg-orange-50 ms-4 p-2 w-11/12" type="text" id="main-search-field"
-          name="main-search-field" placeholder="What are you looking for?">
-        <button type="submit" onclick="findItems()" class=""><i id="search-tool" data-feather="search"></i></button>
-      </form>
+        <form id="main-search-container" class="py-3 m-auto w-5/6" action="/products" method="GET">
+          <input class="rounded-md p-2 w-10/12 md:w-7/12" type="text" id="main-search-field" name="main-search-field"
+            placeholder="Search products">
+          <button type="submit" onclick="findItems()"><i id="search-tool" data-feather="search"></i></button>
+        </form>
     </header>
 
     <nav id="nav" class="bg-secondary-dark flex">
@@ -68,7 +66,7 @@
 
     <main class="min-h-lvh">
 
-      <div id="search-output" class="text-lg"></div>
+      <h1 class="text-4xl text-secondary-dark font-display">Top deals</h1>
 
     </main>
 

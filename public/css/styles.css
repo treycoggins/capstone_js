@@ -46,7 +46,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Helvetica, Arial, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -564,6 +564,10 @@ video {
   margin: 1rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -625,8 +629,16 @@ video {
   min-height: 100lvh;
 }
 
+.w-10\/12 {
+  width: 83.333333%;
+}
+
 .w-11\/12 {
   width: 91.666667%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .shrink-0 {
@@ -653,12 +665,20 @@ video {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-end {
   justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -707,11 +727,6 @@ video {
   border-color: rgb(175 140 74 / var(--tw-border-opacity));
 }
 
-.bg-orange-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 247 237 / var(--tw-bg-opacity));
-}
-
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(23 84 66 / var(--tw-bg-opacity));
@@ -742,11 +757,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .px-2 {
@@ -784,8 +794,12 @@ video {
   vertical-align: middle;
 }
 
+.font-display {
+  font-family: Orbitron;
+}
+
 .font-sans {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .text-2xl {
@@ -793,9 +807,9 @@ video {
   line-height: 2rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-sm {
@@ -860,7 +874,7 @@ body {
 }
 
 .overlay {
-  background-color: rgb(0,0,0,0.9);
+  background-color: rgb(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -885,8 +899,9 @@ body {
   animation: fade-in 1s ease;
 }
 
-#shopping-cart {
-  margin: 10px;
+#logo {
+  height: 50px;
+  width: 200px;
 }
 
 #navMenu-close {
@@ -899,10 +914,8 @@ body {
 #search-tool {
   stroke: var(--primary-dark);
   position: absolute;
-  margin: 10px;
-  top: 30%;
-  right: 13px;
-  transform: translateY(-50%);
+  top: 25%;
+  right: 18%;
   height: 24px;
   width: 24px;
 }
@@ -915,10 +928,30 @@ body {
   height: 2rem;
 }
 
-.shopping-count {
+#main-nav-menu-items {
+  position: relative;
+}
+
+#shopping-icon {
   position: absolute;
-  top: 8px;
-  right: 14px;
+}
+
+#user {
+  position: absolute;
+  top: 15px;
+  right: 70px;
+}
+
+#shopping-cart {
+  position: absolute;
+  top: -30px;
+  right: 20px;
+}
+
+#shopping-count {
+  position: absolute;
+  top: -50px;
+  right: 30px;
   color: darkred;
   font-weight: bold;
 }
@@ -966,4 +999,34 @@ nav {
 
 .show-form {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .md\:size-10 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .md\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-4\/6 {
+    width: 66.666667%;
+  }
+
+  .lg\:w-7 {
+    width: 1.75rem;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
 }
