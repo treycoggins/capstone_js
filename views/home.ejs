@@ -1,12 +1,12 @@
 <%- include('partials/head.ejs') %>
 
-  <body id="body" class="bg-primary font-sans">
+  <body id="body" class="bg-slate-100 font-sans">
     <div id="overlay" class="overlay">
       <div class="navMenu-close">
         <i id="navMenu-close" data-feather="x"></i>
       </div>
     </div>
-    <header class="flex flex-col justify-between bg-primary-dark border-b-2 border-secondary-dark">
+    <header class="flex flex-col justify-between bg-primary-dark border-b-2 border-secondary-dark text-primary-dark">
       <div class="flex flex-col pt-3">
         <div class="flex justify-between">
           <div>
@@ -16,12 +16,12 @@
               <div class="bar"></div>
             </div>
           </div>
-          <div class="m-auto">
+          <div class="m-auto text-secondary-dark">
             <a href="/">
               <img id="logo" src="../public/img/logo.png" alt="BitBuggy Logo" />
             </a>
           </div>
-          <div id="main-nav-menu-items" class="flex justify-center items-end">
+          <div id="main-nav-menu-items" class="flex justify-center items-end text-secondary-dark">
             <div id="user" class="self-center">
               <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-10 pe-1"></i></a>
             </div>
@@ -40,7 +40,7 @@
 
     <nav id="nav" class="bg-secondary-dark flex">
       <div class="flex flex-col py-4 bg-secondary-light text-primary">
-        <div class="user-login flex justify-end">
+        <div id="user-login" class="flex justify-end">
           <a href="/get-access">
             <p class="self-center text-sm pe-2">Sign in</p>
           </a>
@@ -65,9 +65,25 @@
     </nav>
 
     <main class="min-h-lvh">
+      <section id="section-top-deals" class="w-screen h-min relative">
+        <div class="primary-box-shadow">
+          <div class="clip-background-primary"></div>
+        </div>
+        <div id="top-deals-content" class="absolute top-0 left-0 w-full h-full">
+          <h1 class="text-secondary-dark font-display text-6xl">Top Deals</h1>
+          <img src="../public/img/apple-products.jpg" alt="Apple products">
+        </div ->
+      </section>
 
-      <h1 class="text-4xl text-secondary-dark font-display">Top deals</h1>
+      <!-- <section id="section-categories" class="secondary-box-shadow">
+        <div class="clip-background-secondary">
+          <h2>Categories</h2>
+        </div>
+      </section>
 
+      <section id="section-targeted">Top Picks</section>
+
+      <section id="section-buy-again">Buy Again</section> -->
     </main>
 
 
