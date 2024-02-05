@@ -21,10 +21,14 @@
 		"ejs": "^3.1.9",
 		"express": "^4.18.2",
 		"feather-icons": "^4.29.1",
-		"mysql2": "^3.9.1"
+		"mysql2": "^3.9.1",
+		"node": "^21.6.1"
 	},
 	"scripts": {
-		"build": "tailwindcss build -i ./src/main.css -o ./public/css/styles.css --watch",
+		"build": "npx tailwindcss build -i ./src/main.css -o ./public/css/styles.css --watch",
 		"start": "nodemon -V app.js"
+	},
+	"nodemonConfig": {
+		"ext": "css, html, ejs, js"
 	}
 }

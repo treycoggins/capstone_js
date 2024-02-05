@@ -1,11 +1,11 @@
-const signupDropDown = document.getElementById("signup-dropdown");
-const signinDropDown = document.getElementById("signin-dropdown");
+const sectionSignup = document.getElementById("section-signup");
+const sectionSignin = document.getElementById("section-signin");
 const signupForm = document.getElementById("signup-form");
 const signinForm = document.getElementById("signin-form");
 
-signupDropDown.addEventListener("click", () => {
+sectionSignup.addEventListener("click", () => {
 	signupForm.classList.toggle("show-form");
 });
-signinDropDown.addEventListener("click", () => {
+sectionSignup.addEventListener("click", () => {
 	signinForm.classList.toggle("show-form");
 });

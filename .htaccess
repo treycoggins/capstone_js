@@ -9,3 +9,4 @@ PassengerStartupFile app.js
 RewriteEngine On
 
 AddType image/png .png
+AddType text/js .js

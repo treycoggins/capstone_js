@@ -3,7 +3,7 @@ module.exports = {
 	content: ["./views/**/*.{html,ejs,js}", "./src/**/*.{html,css,js}"],
 	theme: {
 		fontFamily: {
-			sans: ["Helvetica", "Arial", "sans-serif"],
+			sans: ["Poppins", "Helvetica", "Arial", "sans-serif"],
 			display: ["Orbitron"],
 		},
 		extend: {

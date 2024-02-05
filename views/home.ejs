@@ -1,44 +1,41 @@
 <%- include('partials/head.ejs') %>
 
-  <body id="body" class="bg-slate-100 font-sans">
+  <body id="body" class="bg-slate-100 font-sans min-h-full">
     <div id="overlay" class="overlay">
-      <div class="navMenu-close">
-        <i id="navMenu-close" data-feather="x"></i>
+      <div class="navMenu-close absolute top-40 right-40">
+        <i id="navMenu-close" class="size-8 md:size-14" data-feather="x"></i>
       </div>
     </div>
-    <header class="flex flex-col justify-between bg-primary-dark border-b-2 border-secondary-dark text-primary-dark">
-      <div class="flex flex-col pt-3">
-        <div class="flex justify-between">
-          <div>
-            <div id="hamburger" class="flex flex-col px-2">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
+    <header class=" bg-primary-dark border-b-2 border-secondary-dark text-primary-dark h-min">
+      <div class="flex pt-4 justify-between">
+        <div id="hamburger" class="flex flex-col w-3/12 px-4">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="m-0 md:m-auto text-secondary-dark">
+          <a href="/">
+            <img id="logo" src="../img/logo.png" alt="BitBuggy Logo" />
+          </a>
+        </div>
+        <div id="main-nav-menu-items" class="flex text-secondary-dark">
+          <div id="user-icon" class="">
+            <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-14"></i></a>
           </div>
-          <div class="m-auto text-secondary-dark">
-            <a href="/">
-              <img id="logo" src="../public/img/logo.png" alt="BitBuggy Logo" />
-            </a>
-          </div>
-          <div id="main-nav-menu-items" class="flex justify-center items-end text-secondary-dark">
-            <div id="user" class="self-center">
-              <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-10 pe-1"></i></a>
-            </div>
-            <div id="shopping-icon" class="flex flex-col">
-              <p id="shopping-count" class="md:text-xl">0</p>
-              <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-10"></i>
-            </div>
+          <div id="shopping-icon" class="flex flex-col">
+            <p id="shopping-count" class="md:text-2xl">0</p>
+            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14"></i>
           </div>
         </div>
-        <form id="main-search-container" class="py-3 m-auto w-5/6" action="/products" method="GET">
-          <input class="rounded-md p-2 w-10/12 md:w-7/12" type="text" id="main-search-field" name="main-search-field"
-            placeholder="Search products">
-          <button type="submit" onclick="findItems()"><i id="search-tool" data-feather="search"></i></button>
-        </form>
+      </div>
+      <form id="main-search-container" class="py-3 flex justify-center items-center" action="/products" method="GET">
+        <input class="rounded-md p-2 w-10/12 md:w-8/12" type="text" id="main-search-field" name="main-search-field"
+          placeholder="Search products">
+        <button type="submit" onclick="findItems()"><i id="search-tool" data-feather="search"></i></button>
+      </form>
     </header>
 
-    <nav id="nav" class="bg-secondary-dark flex">
+    <nav id="nav" class="bg-secondary-dark flex md:text-2xl">
       <div class="flex flex-col py-4 bg-secondary-light text-primary">
         <div id="user-login" class="flex justify-end">
           <a href="/get-access">
@@ -64,24 +61,57 @@
       </ul>
     </nav>
 
-    <main class="min-h-lvh">
-      <section id="section-top-deals" class="w-screen h-min relative">
-        <div class="primary-box-shadow">
+    <main class="">
+      <section id="section-top-deals" class="w-full relative">
+        <div class="secondary-box-shadow">
           <div class="clip-background-primary"></div>
         </div>
-        <div id="top-deals-content" class="absolute top-0 left-0 w-full h-full">
-          <h1 class="text-secondary-dark font-display text-6xl">Top Deals</h1>
-          <img src="../public/img/apple-products.jpg" alt="Apple products">
-        </div ->
-      </section>
-
-      <!-- <section id="section-categories" class="secondary-box-shadow">
-        <div class="clip-background-secondary">
-          <h2>Categories</h2>
+        <div id="top-deals-content" class="relative top-0 left-0 w-full h-full">
+          <h2 id="top-deals-title" class="text-secondary-dark font-display text-6xl">Top Deals</h2>
+          <div class="flex flex-col md:flex-row justify-evenly">
+            <img id="cameras" src="../img/camera.jpg" alt="cameras" class="w-1/2 h-auto rounded-sm absolute">
+            <img id="apple-products" src="../img/apple-products.jpg" class="hidden" alt="Apple products">
+            <img id="sony-buds" src="../img/sonybuds.jpg" alt="Sony earbuds">
+          </div>
         </div>
       </section>
 
-      <section id="section-targeted">Top Picks</section>
+      <section id="section-membership">
+        <h2 class="text-4xl text-center m-2">Become a member for savings and rewards!</h2>
+        <div class=" cards-container flex flex-col md:flex-row justify-center items-center">
+          <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
+            <i data-feather="truck" class="size-14"></i>
+            <h3 class="text-center text-3xl text-sans pt-4">FREE Shipping!</h3>
+            <p class="text-xl text-center m-5">Members take advantage of free shipping on all orders guaranteed to be
+              delivered within 3
+              days.</p>
+          </div>
+          <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
+            <i data-feather="dollar-sign" class="size-14"></i>
+            <h3 class="text-center text-3xl text-sans pt-4">Member's Deals</h3>
+            <p class="text-xl text-center m-5">Members also receive deep price cuts on in-demand products and first
+              looks at new product selections.</p>
+          </div>
+          <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
+            <i data-feather="star" class="size-14"></i>
+            <h3 class="text-center text-3xl text-sans pt-4">Rewards points</h3>
+            <p class="text-xl text-center m-5">Members are automatically enrolled. Accumulate points toward discounts on
+              every order!</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <h2 class="heading-secondary flex justify-center">become a member today!</h2>
+        </div>
+      </section>
+
+      <!-- <section id="section-categories relative">
+        <div class="primary-box-shadow"">
+          <div class=" clip-background-secondary"></div>
+        </div>
+        <h2 class="absolute top-10 left-8">Categories</h2>
+      </section> -->
+
+      <!-- <section id="section-targeted">Top Picks</section>
 
       <section id="section-buy-again">Buy Again</section> -->
     </main>
