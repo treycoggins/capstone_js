@@ -9,12 +9,14 @@ const navMenuOpen = () => {
 	navPane.classList.remove("side-nav-close");
 	navPane.classList.toggle("side-nav-open");
 	mainBody.classList.toggle("overlay-open");
+	document.body.style.overflow = "hidden";
 };
 
 const navMenuClose = () => {
 	navPane.classList.remove("side-nav-open");
 	navPane.classList.add("side-nav-close");
 	mainBody.classList.remove("overlay-open");
+	document.body.style.overflow = "visible";
 };
 
 navMenu.addEventListener("click", navMenuOpen);

@@ -544,10 +544,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -692,8 +688,8 @@ video {
   width: 91.666667%;
 }
 
-.w-3\/12 {
-  width: 25%;
+.w-2\/12 {
+  width: 16.666667%;
 }
 
 .w-full {
@@ -702,10 +698,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-2\/12 {
-  width: 16.666667%;
 }
 
 .shrink-0 {
@@ -744,10 +736,6 @@ video {
   flex-wrap: wrap;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
 }
@@ -773,12 +761,8 @@ video {
        column-gap: 1rem;
 }
 
-.gap-y-7 {
-  row-gap: 1.75rem;
-}
-
-.self-end {
-  align-self: flex-end;
+.gap-y-10 {
+  row-gap: 2.5rem;
 }
 
 .self-center {
@@ -1044,7 +1028,7 @@ body {
 
 .overlay {
   background-color: rgb(0, 0, 0, 0.9);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -1076,7 +1060,8 @@ body {
 }
 
 #header {
-  height: 180px;
+  height: -moz-min-content;
+  height: min-content;
   position: relative;
 }
 
@@ -1179,15 +1164,14 @@ nav {
 
 #main {
   position: relative;
-  height: -moz-min-content;
-  height: min-content;
+  width: 100%;
 }
 
 #section-top-deals {
   position: relative;
   top: 0;
   left: 0;
-  min-height: 650px;
+  min-height:650px;
 }
 
 .clip-background-primary::before {
@@ -1220,9 +1204,7 @@ nav {
 
 #section-membership {
   position: relative;
-  top: 0;
-  left: 0;
-  min-height: 100%;
+  width: 100%;
   margin: 3rem 0 3rem 0;
 }
 
@@ -1315,7 +1297,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 650px;
+  height: 750px;
   background-color: var(--secondary-dark);
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
@@ -1328,9 +1310,7 @@ nav {
 
 #section-categories {
   position: relative;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
+  width: 100%;
 }
 
 #section-categories-title {
@@ -1360,18 +1340,13 @@ nav {
   border-radius: 10px;
 }
 
-#section-targeted {
+#section-top-picks {
   position: relative;
-  top: 0;
-  left: 0;
-  min-height: 100%;
+  width: 100%;
 }
 
 #section-buy-again {
   position: relative;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
 }
 
 .hover\:text-secondary-light:hover {
