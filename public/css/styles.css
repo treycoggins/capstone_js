@@ -704,6 +704,10 @@ video {
   width: 100vw;
 }
 
+.w-2\/12 {
+  width: 16.666667%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -738,6 +742,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -836,7 +844,7 @@ video {
 
 .bg-secondary-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(196 161 93 / var(--tw-bg-opacity));
+  background-color: rgb(215 184 122 / var(--tw-bg-opacity));
 }
 
 .bg-slate-100 {
@@ -987,7 +995,7 @@ video {
 
 .text-secondary-light {
   --tw-text-opacity: 1;
-  color: rgb(196 161 93 / var(--tw-text-opacity));
+  color: rgb(215 184 122 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1025,7 +1033,7 @@ video {
   --primary: #175442;
   --primary-medium: #06543c;
   --primary-dark: #063427;
-  --secondary-light: #c4a15d;
+  --secondary-light: #d7b87a;
   --secondary-dark: #af8c4a;
 }
 
@@ -1086,12 +1094,12 @@ body {
 }
 
 #user-icon {
-  margin: 0 0 0 .6rem;
+  margin: 0 0 0 0.6rem;
   height: 100%;
 }
 
 #shopping-cart {
-  margin: 0 .6rem 0 0;
+  margin: 0 0.6rem 0 0;
 }
 
 #shopping-count {
@@ -1229,6 +1237,13 @@ nav {
 .cta-btn:hover {
   background-color: var(--secondary-light);
   color: var(--primary-light);
+  transform: translateY(-5px);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+  transition: 1s ease;
+}
+
+.cta-btn:not(:hover) {
+  transition: 1s ease;
 }
 
 .cards-container {
@@ -1247,7 +1262,7 @@ nav {
 
 .card:hover {
   transform: translateY(-15px);
-  transition: .6s ease;
+  transition: 0.6s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -1273,11 +1288,15 @@ nav {
 .heading-secondary {
   font-size: 2.5rem;
   height: 120px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, var(--secondary-light), var(--primary-light));
+  background-image: linear-gradient(
+		to right,
+		var(--secondary-light),
+		var(--primary-light)
+	);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -1352,7 +1371,12 @@ nav {
   position: relative;
   top: 0;
   left: 0;
-  min-height: 100%;
+  min-height: 100vh;
+}
+
+.hover\:text-secondary-light:hover {
+  --tw-text-opacity: 1;
+  color: rgb(215 184 122 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -1383,8 +1407,3 @@ nav {
     line-height: 2rem;
   }
 }
-
-
-
-
-

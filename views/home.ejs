@@ -6,7 +6,7 @@
     </div>
     <header id="header" class="bg-primary-dark border-b-2 border-secondary-dark text-primary-dark h-min">
       <div id="header-items" class="flex pt-4 justify-between">
-        <div id="hamburger" class="flex flex-col w-3/12 px-4">
+        <div id="hamburger" class="flex flex-col w-2/12 px-4">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -17,13 +17,15 @@
           </a>
         </div>
         <div id="header-nav-menu-items" class="flex text-secondary-dark items-center">
-          <div id="user-icon" class="flex items-center">
+          <div id="user-icon" class="flex items-center hover:text-secondary-light">
             <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-14"></i></a>
           </div>
-          <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14"></i>
+          <div class="hover:text-secondary-light">
+            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14"></i>
+            <p id="shopping-count" class="text-lg md:text-2xl">0</p>
+          </div>
         </div>
       </div>
-      <p id="shopping-count" class="text-secondary-dark text-lg md:text-2xl">0</p>
       <form id="header-search-container" class="py-3 flex justify-center items-center" action="/products" method="GET">
         <input class="rounded-md p-2 w-10/12 md:w-8/12" type="text" id="header-search-field" name="header-search-field"
           placeholder="Search products">
@@ -126,9 +128,15 @@
         </div>
       </section>
 
-      <!-- <section id="section-targeted">Top Picks</section>
+      <section id="section-targeted">
+        <h2 class="font-display text-primary text-6xl">Top Picks</h2>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </section>
 
-      <section id="section-buy-again">Buy Again</section> -->
+      <!-- <section id="section-buy-again">Buy Again</section> -->
     </main>
 
 
@@ -138,7 +146,7 @@
       <script>
         feather.replace();
       </script>
-      <script src="/js/home.js"></script>
+      <script src="../public/js/home.js"></script>
   </body>
 
   </html>
