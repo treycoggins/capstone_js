@@ -25,7 +25,7 @@
 		"node": "^21.6.1"
 	},
 	"scripts": {
-		"build": "npx tailwindcss build -i ./src/main.css -o ./public/css/styles.css --watch",
+		"build": "TAILWIND_MODE=watch tailwindcss -i ./src/main.css -o ./public/css/styles.css --watch",
 		"start": "nodemon -V app.js"
 	},
 	"nodemonConfig": {

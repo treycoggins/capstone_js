@@ -1,13 +1,11 @@
 <%- include('partials/head.ejs') %>
 
   <body id="body" class="bg-slate-100 font-sans min-h-full">
-    <div id="overlay" class="overlay">
-      <div class="navMenu-close absolute top-40 right-40">
-        <i id="navMenu-close" class="size-8 md:size-14" data-feather="x"></i>
-      </div>
+    <div id="overlay" class="overlay relative">
+      <i id="navMenu-close" class="size-8 md:size-14" data-feather="x"></i>
     </div>
-    <header class=" bg-primary-dark border-b-2 border-secondary-dark text-primary-dark h-min">
-      <div class="flex pt-4 justify-between">
+    <header id="header" class="bg-primary-dark border-b-2 border-secondary-dark text-primary-dark h-min">
+      <div id="header-items" class="flex pt-4 justify-between">
         <div id="hamburger" class="flex flex-col w-3/12 px-4">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -18,18 +16,16 @@
             <img id="logo" src="../img/logo.png" alt="BitBuggy Logo" />
           </a>
         </div>
-        <div id="main-nav-menu-items" class="flex text-secondary-dark">
-          <div id="user-icon" class="">
+        <div id="header-nav-menu-items" class="flex text-secondary-dark items-center">
+          <div id="user-icon" class="flex items-center">
             <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-14"></i></a>
           </div>
-          <div id="shopping-icon" class="flex flex-col">
-            <p id="shopping-count" class="md:text-2xl">0</p>
-            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14"></i>
-          </div>
+          <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14"></i>
         </div>
       </div>
-      <form id="main-search-container" class="py-3 flex justify-center items-center" action="/products" method="GET">
-        <input class="rounded-md p-2 w-10/12 md:w-8/12" type="text" id="main-search-field" name="main-search-field"
+      <p id="shopping-count" class="text-secondary-dark text-lg md:text-2xl">0</p>
+      <form id="header-search-container" class="py-3 flex justify-center items-center" action="/products" method="GET">
+        <input class="rounded-md p-2 w-10/12 md:w-8/12" type="text" id="header-search-field" name="header-search-field"
           placeholder="Search products">
         <button type="submit" onclick="findItems()"><i id="search-tool" data-feather="search"></i></button>
       </form>
@@ -61,46 +57,60 @@
       </ul>
     </nav>
 
-    <main class="">
-      <section id="section-top-deals" class="w-full relative">
+    <main id="main" class="">
+      <section id="section-top-deals" class="w-full">
         <div class="secondary-box-shadow">
           <div class="clip-background-primary"></div>
         </div>
-        <div id="top-deals-content" class="relative top-0 left-0 w-full h-full">
+        <div id="top-deals-content" class="relative top-0 left-0 w-full">
           <h2 id="top-deals-title" class="text-secondary-dark font-display text-6xl">Top Deals</h2>
-          <div class="flex flex-col md:flex-row justify-evenly">
-            <img id="cameras" src="../img/camera.jpg" alt="cameras" class="w-1/2 h-auto rounded-sm absolute">
-            <img id="apple-products" src="../img/apple-products.jpg" class="hidden" alt="Apple products">
-            <img id="sony-buds" src="../img/sonybuds.jpg" alt="Sony earbuds">
+          <div id="top-deals-items" class="grid grid-cols-2 h-full">
+            <ul class="text-secondary-dark self-center m-4">
+              <li class="text-xl underline">Apple Products</li>
+              <li class="m-3 text-sm">iPhone:<br /><small class="line-through">$999</small>&#9;💥<small>$799</small>
+              </li>
+              <li class="m-3 text-sm">Smart Watches:<br /><small
+                  class="line-through">$499</small>&#9;💥<small>$349</small></li>
+              <li class="text-sm m-3">Macbooks:<br /><small class="line-through">$1499</small>&#9;💥<small>$1299</small>
+              </li>
+            </ul>
+            <img class="self-center rounded-md w-11/12 h-2/3" src="../img/apple-products.jpg" alt="apple products">
           </div>
         </div>
       </section>
 
-      <section id="section-membership">
-        <h2 class="text-4xl text-center m-2">Become a member for savings and rewards!</h2>
+      <section id="section-membership" class="text-center">
+        <h2 class="text-4xl m-1">Become a member for extra savings and benefits!</h2>
+        <button
+          class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto text-center shadow-black border-secondary-dark">Sign
+          up now</button>
         <div class=" cards-container flex flex-col md:flex-row justify-center items-center">
           <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
             <i data-feather="truck" class="size-14"></i>
             <h3 class="text-center text-3xl text-sans pt-4">FREE Shipping!</h3>
-            <p class="text-xl text-center m-5">Members take advantage of free shipping on all orders guaranteed to be
+            <p class="text-xl m-5">Members take advantage of free shipping on all orders guaranteed to be
               delivered within 3
               days.</p>
           </div>
           <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
             <i data-feather="dollar-sign" class="size-14"></i>
             <h3 class="text-center text-3xl text-sans pt-4">Member's Deals</h3>
-            <p class="text-xl text-center m-5">Members also receive deep price cuts on in-demand products and first
+            <p class="text-xl m-5">Members also receive deep price cuts on in-demand products and first
               looks at new product selections.</p>
           </div>
           <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
             <i data-feather="star" class="size-14"></i>
-            <h3 class="text-center text-3xl text-sans pt-4">Rewards points</h3>
+            <h3 class="text-3xl text-sans pt-4">Rewards points</h3>
             <p class="text-xl text-center m-5">Members are automatically enrolled. Accumulate points toward discounts on
               every order!</p>
           </div>
         </div>
-        <div class="text-center">
-          <h2 class="heading-secondary flex justify-center">become a member today!</h2>
+        <div class="">
+          <h2 class="heading-secondary text-center">Become a member today!</h2>
+          <button
+            class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto text-center shadow-black border-secondary-dark">Sign
+            up now</button>
+
         </div>
       </section>
 

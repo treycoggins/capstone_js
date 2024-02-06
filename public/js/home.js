@@ -6,14 +6,14 @@ const navMenuCloseBtn = document.getElementById("navMenu-close");
 const navLinks = [...document.getElementsByClassName("nav-link-item")];
 
 const navMenuOpen = () => {
-	navPane.classList.remove("nav-close");
-	navPane.classList.toggle("nav-open");
+	navPane.classList.remove("side-nav-close");
+	navPane.classList.toggle("side-nav-open");
 	mainBody.classList.toggle("overlay-open");
 };
 
 const navMenuClose = () => {
-	navPane.classList.remove("nav-open");
-	navPane.classList.add("nav-close");
+	navPane.classList.remove("side-nav-open");
+	navPane.classList.add("side-nav-close");
 	mainBody.classList.remove("overlay-open");
 };
 
@@ -22,7 +22,7 @@ navMenuCloseBtn.addEventListener("click", navMenuClose);
 navLinks.forEach((navLink) => navLink.addEventListener("click", navMenuClose));
 
 const findItems = () => {
-	const item = document.getElementById("main-search-field").value;
+	const item = document.getElementById("header-search-field").value;
 	const htmlOutput = `<p>Search results for ${item}:</p>`;
 
 	document.getElementById("search-output").innerHTML = htmlOutput;
