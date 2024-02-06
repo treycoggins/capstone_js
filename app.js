@@ -10,7 +10,8 @@ app.set("views", path.join(__dirname, "views"));
 
 // MIDDLEWARES
 // Serve the static files
-app.use(express.static(path.join(__dirname, "/public")));
+// app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(__dirname));
 app.use(
 	express.static(path.join(__dirname, "/node_modules/feather-icons/dist"))
 );

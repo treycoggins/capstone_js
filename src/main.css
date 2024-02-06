@@ -179,22 +179,6 @@ nav {
 .primary-box-shadow {
 	filter: drop-shadow(1px 10px 10px var(--primary-dark));
 }
-.clip-background-secondary::before {
-	content: "";
-	position: absolute;
-	top: 800px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--secondary-dark);
-	clip-path: polygon(0% 30%, 100% 30%, 100% 90%, 0% 80%);
-	z-index: -1;
-}
-
-.secondary-box-shadow {
-	filter: drop-shadow(1px 10px 10px var(--secondary-dark));
-}
-
 
 #top-deals-title {
 	margin: 0 0 0 1rem;
@@ -213,6 +197,14 @@ nav {
 	left: 0;
 	min-height: 100%;
 	margin: 3rem 0 3rem 0;
+}
+
+#section-membership-title {
+	height: 120px;
+}
+
+.cta-btn {
+	height: 60px;
 }
 
 .cta-btn:hover {
@@ -258,6 +250,7 @@ nav {
 
 .heading-secondary {
 	font-size: 2.5rem;
+	height: 120px;
 	font-family: 'Poppins';
 	text-transform: uppercase;
 	font-weight: 700;
@@ -273,11 +266,52 @@ nav {
 	text-shadow: 2rem 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 
+.clip-background-secondary::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 650px;
+	background-color: var(--secondary-dark);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+	z-index: -1;
+}
+
+.secondary-box-shadow {
+	filter: drop-shadow(1px 10px 10px var(--secondary-dark));
+}
+
+
 #section-categories {
 	position: relative;
 	top: 0;
 	left: 0;
-	min-height: 100%;
+	min-height: 100vh;
+}
+
+#section-categories-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#category-img-grid {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 50vh;
+}
+.category-grid-item {
+	height: auto;
+	width: 35vh;
+}
+.category-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 #section-targeted {

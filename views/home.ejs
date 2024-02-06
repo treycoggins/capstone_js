@@ -13,7 +13,7 @@
         </div>
         <div class="m-0 md:m-auto text-secondary-dark">
           <a href="/">
-            <img id="logo" src="../img/logo.png" alt="BitBuggy Logo" />
+            <img id="logo" src="../public/img/logo.png" alt="BitBuggy Logo" />
           </a>
         </div>
         <div id="header-nav-menu-items" class="flex text-secondary-dark items-center">
@@ -74,16 +74,16 @@
               <li class="text-sm m-3">Macbooks:<br /><small class="line-through">$1499</small>&#9;💥<small>$1299</small>
               </li>
             </ul>
-            <img class="self-center rounded-md w-11/12 h-2/3" src="../img/apple-products.jpg" alt="apple products">
+            <img class="self-center rounded-md w-11/12 h-2/3" src="../public/img/apple-products.jpg" alt="apple products">
           </div>
         </div>
       </section>
 
       <section id="section-membership" class="text-center">
-        <h2 class="text-4xl m-1">Become a member for extra savings and benefits!</h2>
+        <h2 id="section-membership-title" class="text-4xl m-1">Become a member for extra savings and benefits!</h2>
         <button
-          class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto text-center shadow-black border-secondary-dark">Sign
-          up now</button>
+          class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto text-center shadow-black border-secondary-dark tracking-wider">Sign
+          up now!</button>
         <div class=" cards-container flex flex-col md:flex-row justify-center items-center">
           <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
             <i data-feather="truck" class="size-14"></i>
@@ -105,21 +105,26 @@
               every order!</p>
           </div>
         </div>
-        <div class="">
-          <h2 class="heading-secondary text-center">Become a member today!</h2>
+        <div class="flex flex-col justify-center items-center">
+          <h2 class="heading-secondary">Become a member today!</h2>
           <button
-            class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto text-center shadow-black border-secondary-dark">Sign
-            up now</button>
-
+            class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto shadow-black border-secondary-dark tracking-wider">Sign
+            up now!</button>
         </div>
       </section>
 
-      <!-- <section id="section-categories relative">
+      <section id="section-categories" class="text-primary">
         <div class="primary-box-shadow"">
           <div class=" clip-background-secondary"></div>
         </div>
-        <h2 class="absolute top-10 left-8">Categories</h2>
-      </section> -->
+        <h2 id="section-categories-title" class="font-display text-5xl m-4">Categories</h2>
+        <div id="category-img-grid" class="grid gap-x-4 gap-y-7 grid-cols-2 grid-rows-2 text-center p-3">
+          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/iphone-toss.jpg" alt="electronics"><p>Electronics</p></div>
+          <div class="text-xl flex flex-col"><img class="category-img self-end" src="../public/img/fashion2.jpg" alt="fashion model"><p>Fashion</p></div>
+          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/kitchen2.jpg" alt="home goods"><p>Home Goods</p></div>
+          <div class="text-xl flex flex-col"><img class="category-img self-end" src="../public/img/beauty-face.jpg" alt="beauty products"><p>Beauty Products</p></div>
+        </div>
+      </section>
 
       <!-- <section id="section-targeted">Top Picks</section>
 
