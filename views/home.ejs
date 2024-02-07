@@ -1,12 +1,12 @@
 <%- include('partials/head.ejs') %>
 
-  <body id="body" class="bg-slate-200 font-sans min-h-full">
+  <body id="home-body" class="bg-slate-200 font-sans min-h-full">
     <div id="overlay" class="overlay relative">
-      <i id="navMenu-close" class="size-8 md:size-14" data-feather="x"></i>
+      <i id="navMenu-close" class="size-8 md:size-14 cursor-pointer" data-feather="x"></i>
     </div>
     <header id="header" class="bg-primary-dark border-b-2 border-secondary-dark text-primary-dark h-min">
       <div id="header-items" class="flex pt-4 justify-between">
-        <div id="hamburger" class="flex flex-col w-2/12 px-4">
+        <div id="hamburger" class="flex flex-col w-2/12 px-4 cursor-pointer">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -21,7 +21,7 @@
             <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-14"></i></a>
           </div>
           <div class="hover:text-secondary-light">
-            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14"></i>
+            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14 cursor-pointer"></i>
             <p id="shopping-count" class="text-lg md:text-2xl">0</p>
           </div>
         </div>
@@ -35,9 +35,9 @@
 
     <nav id="nav" class="bg-secondary-dark flex md:text-2xl">
       <div class="flex flex-col py-4 bg-secondary-light text-primary">
-        <div id="user-login" class="flex justify-end">
+        <div id="user-login" class="flex justify-end me-3">
           <a href="/get-access">
-            <p class="self-center text-sm pe-2">Sign in</p>
+            <p class="self-center text-sm pe-2 cursor-pointer">Sign in</p>
           </a>
           <i data-feather="user"></i>
         </div>
@@ -47,13 +47,13 @@
         </div>
       </div>
       <ul class="nav-links mx-4 text-primary">
-        <li class="nav-link-item flex m-4">
+        <li class="nav-link-item flex m-4 cursor-pointer">
           <a href="/"></a><i class="size-5 mx-2" data-feather="home"></i>Home</a>
         </li>
-        <li class="nav-link-item flex m-4">
+        <li class="nav-link-item flex m-4 cursor-pointer">
           <a href="/products"></a><i class="size-5 mx-2" data-feather="package"></i>Products</a>
         </li>
-        <li class="nav-link-item flex m-4">
+        <li class="nav-link-item flex m-4 cursor-pointer">
           <a href="/get-access"></a><i class="size-5 mx-2" data-feather="user-check"></i>Become a Member</a>
         </li>
       </ul>

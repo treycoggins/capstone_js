@@ -13,7 +13,7 @@
 	--secondary-dark: #af8c4a;
 }
 
-body {
+#home-body {
 	overflow-x: hidden;
 	color: var(--primary);
 }
@@ -160,7 +160,7 @@ nav {
 	position: relative;
 	top: 0;
 	left: 0;
-	min-height:650px;
+	min-height: 650px;
 }
 
 .clip-background-primary::before {
@@ -213,7 +213,7 @@ nav {
 }
 
 .cta-btn:not(:hover) {
-	transition: 1s ease;	
+	transition: 1s ease;
 }
 
 .cards-container {
@@ -325,7 +325,6 @@ nav {
 }
 
 #top-picks-grid {
-
 }
 
 #top-picks-item {
@@ -342,4 +341,52 @@ nav {
 
 #section-buy-again {
 	position: relative;
+}
+
+/*////////////////////////////*/
+/* GET-ACCESS STYLES */
+/*////////////////////////////*/
+
+#get-access-body {
+}
+
+header {
+}
+
+main {
+	padding-bottom: 25vh;
+}
+
+.dropdowns {
+	width: 80%;
+	height: 80px;
+}
+.shrink-text {
+	font-size: 1.4rem;
+	justify-content: end;
+	transition: font-size 0.9s ease;
+	color: var(--primary-dark);
+}
+.shrink-text-active {
+	font-size: 1rem;
+	justify-content: start;
+	transition: font-size 1.2s ease;
+	opacity: 0.7;
+}
+
+.input-field {
+}
+
+.input-error {
+	border-color: rgb(185, 28, 28);
+}
+
+/*///////////////////////////////*/
+/* FOOTER */
+/*///////////////////////////////*/
+
+#footer {
+	height: 25vh;
+	position: fixed;
+	bottom: 0;
 }

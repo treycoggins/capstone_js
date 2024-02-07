@@ -1,12 +1,6 @@
 <%- include('partials/head.ejs') %>
 
-  <body id="body" class="bg-primary font-sans">
-    <div id="overlay" class="overlay">
-      <div class="navMenu-close">
-        <i id="navMenu-close" data-feather="x"></i>
-      </div>
-    </div>
-
+  <body id="get-access-body" class="bg-primary font-sans flex flex-col h-screen">
     <header class="bg-primary-dark border-b-2 border-secondary-dark">
       <div class="flex">
         <a class="flex items-center ms-2" href="/"><i class="size-8 text-secondary-dark align-middle"
@@ -18,64 +12,73 @@
     </header>
 
     <main class="bg-primary m-2 flex flex-col">
-      <h2 class="text-2xl basis-full grow shrink-0 py-4 ps-3">Welcome</h2>
-      <section id="section-signup" class="self-center border-secondary-dark border border-b-0 w-11/12 p-2 flex">
-        <div id="signup-dropdown" class="flex">
+      <h2 class="text-2xl basis-full grow-0 py-4 ps-3">Welcome</h2>
+      <section id="section-signup" class="self-center border-secondary-dark border-2 border-b-0 w-11/12 p-2">
+        <div id="signup-dropdown" class="flex cursor-pointer dropdowns">
           <i data-feather="chevrons-down" class="m-2"></i>
-          <div class="flex flex-col cursor-pointer">
+          <div class="dropdown-small flex flex-col">
             <small class="text-secondary-dark">New to BitBuggy?</small>
-            <p class="font-bold text-primary-dark">Create an Account.</p>
+            <p id="signup-dropdown-title" class="shrink-text font-bold text-primary-dark">Create an Account.</p>
           </div>
         </div>
-        <form id="signup-form" class="hidden flex-col my-4" action="/signup" method="POST">
-          <label class="mt-2 ms-4" for="first_name">First Name</label>
-          <input id="first_name" name="first_name" type="text"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <label class="mt-2 ms-4" for="last_name">Last Name</label>
-          <input id="last_name" name="last_name" type="text"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <label class="mt-2 ms-4" for="email">Email Address</label>
-          <input id="email" name="email" type="email"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <label class="mt-2 ms-4" for="username">Username</label>
-          <input id="username" name="username" type="text"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <label class="mt-2 ms-4" for="create_password">Password</label>
-          <input id="create_password" name="create_password" type="password"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <label class="mt-2 ms-4" for="confirm_password">Confirm Password</label>
-          <input id="confirm_password" name="confirm_password" type="password"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <button type="submit" name="submit-btn"
-            class="bg-secondary-light text-primary-dark self-center p-2 border-none w-11/12 mt-4">Submit</button>
+        <form id="signup-form" class="my-1 hidden text-secondary-dark" action="/signup" method="POST">
+          <div id="input-container" class="flex flex-col">
+            <label class="ms-4" for="first_name">First Name</label>
+            <span id="fname-error" class="input-error text-sm mx-4 text-red-700"></span>
+            <input id="first-name" name="first_name" type="text"
+              class="input-field self-center m-2 rounded-md text-gray-700 border-black border-2 w-11/12 p-1">
+            <label class="ms-4" for="last_name">Last Name</label>
+            <span id="lname-error" class="input-error text-sm mx-4 text-red-700"></span>
+            <input id="last-name" name="last_name" type="text"
+              class="input-field self-center m-2 rounded-md text-gray-700 border-black border-2 w-11/12 p-1">
+            <label class="ms-4" for="email">Email Address</label>
+            <span id="email-error" class="input-error text-sm mx-4 text-red-700"></span>
+            <input id="email" name="email" type="email"
+              class="input-field self-center m-2 rounded-md text-gray-700 border-black border-2 w-11/12 p-1">
+            <label class="ms-4" for="username">Username</label>
+            <span id="username-error" class="input-error text-sm mx-4 text-red-700"></span>
+            <input id="username" name="username" type="text"
+              class="input-field self-center m-2 rounded-md text-gray-700 border-black border-2 w-11/12 p-1">
+            <label class="ms-4" for="password">Password</label>
+            <span id="password-error" class="input-error text-sm mx-4 text-red-700"></span>
+            <input id="password" name="password" type="password"
+              class="input-field self-center m-2 rounded-md text-gray-700 border-black border-2 w-11/12 p-1">
+            <label class="ms-4" for="confirmed_password">Confirm Password</label>
+            <span id="confirmed-password-error" class="input-error text-sm mx-4 text-red-700"></span>
+            <input id="confirmed-password" name="confirmed-password" type="password"
+              class="input-field self-center m-2 rounded-md text-gray-700 border-b-ack border-2 w-11/12 p-1">
+            <button id="signup-form-submit" type="submit" name="submit-btn"
+              class="bg-secondary-light text-primary-dark self-center p-2 border-none w-11/12 mt-2">Submit</button>
+          </div>
         </form>
       </section>
-      <section id="section-signin" class="self-center border-secondary-dark border w-11/12 p-2">
-        <div class="signin-dropdown flex">
+      <section id="section-signin" class="self-center border-secondary-dark border-2 w-11/12 py-2">
+        <div id="signin-dropdown" class="flex cursor-pointer dropdowns">
           <i data-feather="chevrons-down" class="m-2"></i>
-          <div class="flex flex-col cursor-pointer">
-            <small class="text-secondary-dark">Already a customer?</small>
-            <p class="font-bold text-primary-dark">Sign in.</p>
+          <div class="flex flex-col">
+            <small class="dropdown-small text-secondary-dark">Already a customer?</small>
+            <p id="signin-dropdown-title" class="shrink-text font-bold text-primary-dark">Sign in.</p>
           </div>
         </div>
-        <form id="signin-form" class="hidden flex-col" action="/signin" method="POST">
-          <label for="user-input" class="mt-2 text-secondary-dark">Username</label>
-          <input id="user-input" name="user" type="text"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <label for="password-input" class="mt-2 text-secondary-dark">Password</label>
-          <input type="password" id="password-input" name="password"
-            class="rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
-          <button type="submit" name="submit-btn"
-            class="bg-secondary-light text-primary-dark self-center p-2 border-none w-11/12 mt-2">Continue</button>
+        <form id="signin-form" class="hidden my-4 justify-center text-secondary-dark" action="/signin" method="POST">
+          <div class="flex flex-col">
+            <label for="user-input" class="ms-4">Username</label>
+            <input id="user-input" name="user" type="text"
+              class="m-2 rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+            <label for="password-input" class="ms-2">Password</label>
+            <input type="password" id="password-input" name="password"
+              class="m-2 rounded-md self-center text-gray-700 border-black border-2 w-11/12 p-1">
+            <button id="signin-form-submit" type="submit" name="submit-btn"
+              class="bg-secondary-light text-primary-dark self-center p-2 border-none w-11/12 mt-2">Continue</button>
+          </div>
         </form>
       </section>
     </main>
     <%- include('partials/footer.ejs') %>
 
 
-
-    <script src="../public/js/get-access.js"></script>
-    <script>feather.replace();</script>
+      <script src="../public/js/get-access.js"></script>
+      <script>feather.replace();</script>
   </body>
 
   </html>
