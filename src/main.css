@@ -293,12 +293,13 @@ nav {
 #section-categories {
 	position: relative;
 	width: 100%;
+	height: 750px;
 }
 
 #section-categories-title {
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: relative;
+	padding: 1rem 0 0 0;
+	z-index: 5;
 }
 
 #category-img-grid {
@@ -321,7 +322,22 @@ nav {
 
 #section-top-picks {
 	position: relative;
-	width: 100%;
+}
+
+#top-picks-grid {
+
+}
+
+#top-picks-item {
+	height: 180px;
+	width: 180px;
+}
+
+#top-picks-item > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
 }
 
 #section-buy-again {

@@ -1,6 +1,6 @@
 <%- include('partials/head.ejs') %>
 
-  <body id="body" class="bg-slate-100 font-sans min-h-full">
+  <body id="body" class="bg-slate-200 font-sans min-h-full">
     <div id="overlay" class="overlay relative">
       <i id="navMenu-close" class="size-8 md:size-14" data-feather="x"></i>
     </div>
@@ -76,7 +76,8 @@
               <li class="text-sm m-3">Macbooks:<br /><small class="line-through">$1499</small>&#9;💥<small>$1299</small>
               </li>
             </ul>
-            <img class="self-center rounded-md w-11/12 h-2/3" src="../public/img/apple-products.jpg" alt="apple products">
+            <img class="self-center rounded-md w-11/12 h-2/3" src="../public/img/apple-products.jpg"
+              alt="apple products">
           </div>
         </div>
       </section>
@@ -119,20 +120,63 @@
         <div class="primary-box-shadow"">
           <div class=" clip-background-secondary"></div>
         </div>
-        <h2 id="section-categories-title" class="font-display text-5xl m-4">Categories</h2>
+        <h2 id="section-categories-title" class="font-display text-5xl ps-4 py-6 my-12">Categories</h2>
         <div id="category-img-grid" class="grid gap-x-4 gap-y-10 grid-cols-2 grid-rows-2 text-center p-3">
-          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/iphone-toss.jpg" alt="electronics"><p>Electronics</p></div>
-          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/fashion2.jpg" alt="fashion model"><p>Fashion</p></div>
-          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/beauty-face.jpg" alt="beauty products"><p>Beauty</p></div>
-          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/kitchen2.jpg" alt="home goods"><p>Home Goods</p></div>
+          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/iphone-toss.jpg"
+              alt="electronics">
+            <p>Electronics</p>
+          </div>
+          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/fashion2.jpg"
+              alt="fashion model">
+            <p>Fashion</p>
+          </div>
+          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/beauty-face.jpg"
+              alt="beauty products">
+            <p>Beauty</p>
+          </div>
+          <div class="text-xl flex flex-col"><img class="category-img" src="../public/img/kitchen2.jpg"
+              alt="home goods">
+            <p>Home Goods</p>
+          </div>
         </div>
       </section>
 
-      <section id="section-top-picks">
-        <h2 class="font-display text-primary text-6xl">Top Picks</h2>
+      <section id="section-top-picks" class="bg-primary-dark w-full pb-12">
+        <h2 class="font-display text-secondary-dark text-6xl ps-4 py-6 my-12">Top Picks</h2>
+        <div class="top-picks-grid m-1 grid grid-col-2 auto-rows-auto gap-2">
+          <div class="top-picks-item *:max-w-none"><img class="h-full w-full" src="../public/img/galaxy21.jpg"
+              alt="samsung galaxy 21"></div>
+          <div class="top-picks-item"><img src="../public/img/sonybuds.jpg" alt="sony earbuds"></div>
+          <div class="top-picks-item col-span-2">
+            <img src="../public/img/airpods.jpg" alt="apple airpods">
+          </div>
+          <div class="top-picks-item"><img src="../public/img/fashion.jpg" alt="woman on the beach"></div>
+          <div class="top-picks-item"><img src="../public/img/kitchen.jpg" alt="chopping vegetables in the kitchen">
+          </div>
+          <div class="top-picks-item col-span-2"><img src="../public/img/camera.jpg" alt="two cameras"></div>
+        </div>
       </section>
 
-      <!-- <section id="section-buy-again">Buy Again</section> -->
+      <section id="section-buy-again" class="mt-12 bg-secondary-dark w-full">
+        <h2 id="section-buy-again-title" class="text-5xl font-display text-primary-dark ps-4 py-6 my-12">Buy Again</h2>
+        <div class="flex flex-col mb-10">
+          <div class="border-primary-dark border-2 p-20 mx-20 my-4 h-full w-auto rounded-md">
+            <p>Insert Item Here</p>
+          </div>
+          <div class="border-primary-dark border-2 p-20 mx-20 my-4 h-full w-auto rounded-md">
+            <p>Insert Item Here</p>
+          </div>
+          <div class="border-primary-dark border-2 p-20 mx-20 my-4 h-full w-auto rounded-md">
+            <p>Insert Item Here</p>
+          </div>
+          <div class="border-primary-dark border-2 p-20 mx-20 my-4 h-full w-auto rounded-md">
+            <p>Insert Item Here</p>
+          </div>
+          <div class="border-primary-dark border-2 p-20 mx-20 my-4 h-full w-auto rounded-md">
+            <p>Insert Item Here</p>
+          </div>
+        </div>
+      </section>
     </main>
 
 

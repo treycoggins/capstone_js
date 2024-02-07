@@ -20,10 +20,12 @@
     <main class="bg-primary m-2 flex flex-col">
       <h2 class="text-2xl basis-full grow shrink-0 py-4 ps-3">Welcome</h2>
       <section id="section-signup" class="self-center border-secondary-dark border border-b-0 w-11/12 p-2 flex">
-        <i data-feather="chevrons-down" class="m-2"></i>
-        <div id="signup-dropdown" class="flex flex-col cursor-pointer">
-          <small class="text-secondary-dark">New to BitBuggy?</small>
-          <p class="font-bold text-primary-dark">Create an Account.</p>
+        <div id="signup-dropdown" class="flex">
+          <i data-feather="chevrons-down" class="m-2"></i>
+          <div class="flex flex-col cursor-pointer">
+            <small class="text-secondary-dark">New to BitBuggy?</small>
+            <p class="font-bold text-primary-dark">Create an Account.</p>
+          </div>
         </div>
         <form id="signup-form" class="hidden flex-col my-4" action="/signup" method="POST">
           <label class="mt-2 ms-4" for="first_name">First Name</label>
@@ -49,9 +51,9 @@
         </form>
       </section>
       <section id="section-signin" class="self-center border-secondary-dark border w-11/12 p-2">
-        <div class="flex">
+        <div class="signin-dropdown flex">
           <i data-feather="chevrons-down" class="m-2"></i>
-          <div class="signin-dropdown flex flex-col cursor-pointer">
+          <div class="flex flex-col cursor-pointer">
             <small class="text-secondary-dark">Already a customer?</small>
             <p class="font-bold text-primary-dark">Sign in.</p>
           </div>
@@ -72,7 +74,7 @@
 
 
 
-    <script src="../public/js/signup.js"></script>
+    <script src="../public/js/get-access.js"></script>
     <script>feather.replace();</script>
   </body>
 

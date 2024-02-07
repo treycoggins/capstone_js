@@ -560,6 +560,10 @@ video {
   top: 0px;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -589,6 +593,11 @@ video {
   margin-right: 0.5rem;
 }
 
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -599,9 +608,18 @@ video {
   margin-right: auto;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .me-4 {
@@ -622,6 +640,10 @@ video {
 
 .ms-6 {
   margin-inline-start: 1.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-2 {
@@ -692,6 +714,10 @@ video {
   width: 16.666667%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -718,6 +744,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.auto-rows-auto {
+  grid-auto-rows: auto;
 }
 
 .grid-cols-2 {
@@ -754,6 +784,10 @@ video {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-x-4 {
@@ -806,6 +840,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.border-primary-dark {
+  --tw-border-opacity: 1;
+  border-color: rgb(6 52 39 / var(--tw-border-opacity));
+}
+
 .border-secondary-dark {
   --tw-border-opacity: 1;
   border-color: rgb(175 140 74 / var(--tw-border-opacity));
@@ -831,9 +870,9 @@ video {
   background-color: rgb(215 184 122 / var(--tw-bg-opacity));
 }
 
-.bg-slate-100 {
+.bg-slate-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -842,6 +881,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-20 {
+  padding: 5rem;
 }
 
 .p-3 {
@@ -877,12 +920,20 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pe-2 {
   padding-inline-end: 0.5rem;
 }
 
 .ps-3 {
   padding-inline-start: 0.75rem;
+}
+
+.ps-4 {
+  padding-inline-start: 1rem;
 }
 
 .pt-4 {
@@ -1311,12 +1362,13 @@ nav {
 #section-categories {
   position: relative;
   width: 100%;
+  height: 750px;
 }
 
 #section-categories-title {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  padding: 1rem 0 0 0;
+  z-index: 5;
 }
 
 #category-img-grid {
@@ -1342,11 +1394,30 @@ nav {
 
 #section-top-picks {
   position: relative;
-  width: 100%;
+}
+
+#top-picks-grid {
+}
+
+#top-picks-item {
+  height: 180px;
+  width: 180px;
+}
+
+#top-picks-item > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #section-buy-again {
   position: relative;
+}
+
+.\*\:max-w-none > * {
+  max-width: none;
 }
 
 .hover\:text-secondary-light:hover {
