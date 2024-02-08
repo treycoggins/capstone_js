@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-	let isValid;
 	const signUpForm = document.getElementById("signup-form");
 	// let isShrunk = false;
 
@@ -25,6 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
 		const regex = /\S+@\S+\.\S+/;
 		let isValid = true;
 
+		const inputs = document.querySelectorAll(".input-field");
+		const errors = document.querySelectorAll(".input-error");
+
+		for (let i = 0; i < inputs.length; i++) {
+			inputs[i].addEventListener("change", () => {
+				errors.forEach((error, index) => {
+					if (inputs[i] !== "") {
+						error[index].textContent = "All Good!";
+					} else {
+						error.textContent = "Please enter this field";
+					}
+				});
+				
+			});
+		}
+
 		// get form values
 		const fname = document.getElementById("first-name").value.trim();
 		const lname = document.getElementById("last-name").value.trim();
@@ -41,7 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 				"Please enter your first name.";
 			document.getElementById("first-name").classList.add("input-error");
 			isValid = false;
+		} else {
+			document.getElementById("fname-error").textContent = "All Good!";
+			document.getElementById("first-name").classList.add("input-success");
 		}
+
 		if (lname === "") {
 			document.getElementById("lname-error").textContent =
 				"Please enter your last name";

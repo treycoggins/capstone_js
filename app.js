@@ -26,12 +26,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-	setTimeout(() => {
-		res.render("signup");
-	}, 700);
+	res.render("signup");
 });
 
-app.post("/signup", (req, res) => {
+// app.post("/signup", (req, res) => {
 	// 	const sql = `INSERT INTO users
 	//       (first_name, last_name, email, username, create_password, confirm_password)
 	//     VALUES (
@@ -50,18 +48,20 @@ app.post("/signup", (req, res) => {
 	// 		console.log("query successful");
 	// 	});
 
-	res.redirect("/signup-success");
+	// res.redirect("/signup-success");
+// });
+
+app.get("/signup-success", (req, res) => {
+	res.render("signup-success");
 });
 
 app.get("/signin", (req, res) => {
-	setTimeout(() => {
-		res.render('signin')
-	}, 700);
+	res.render("signin");
 });
 
-app.get('/signup-success', (req, res) => {
-	res.render("signup-success");
-})
+app.post("/signin", (req, res) => {
+	res.render("/");
+});
 
 // app.post("/signin", (req, res) => {
 // 	res.send(req.body);

@@ -13,7 +13,6 @@
 	--secondary-dark: #af8c4a;
 }
 
-
 /*////////////////////////////*/
 /* HOME */
 
@@ -169,8 +168,6 @@ nav {
 	transition: transform 1s ease;
 	animation: fadeOut 1s ease;
 }
-
-
 
 #main {
 	position: relative;
@@ -378,23 +375,29 @@ main {
 }
 
 .input-field {
+	margin: 8px 0 0 0;
 }
 
 .input-error {
-	border: 2px solid rgb(185, 28, 28);
+	color: rgb(185, 28, 28);
+}
+.input-success {
+	color: var(--primary-light);
 }
 #input-container > span {
 	font-size: 0.8rem;
 }
-
+#input-container > label {
+	margin: 4px 0 0 0;
+}
 
 /*///////////////////////////////*/
 /*SIGN IN*/
 /*///////////////////////////////*/
 
-
-
-
+.validated {
+	color: var(--primary-light);
+}
 
 /*///////////////////////////////*/
 /* FOOTER */
