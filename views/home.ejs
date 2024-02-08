@@ -2,7 +2,7 @@
 
   <body id="home-body" class="bg-slate-200 font-sans min-h-full">
     <div id="overlay" class="overlay relative">
-      <i id="navMenu-close" class="size-8 md:size-14 cursor-pointer" data-feather="x"></i>
+      <i id="navMenu-close" class="size-8 tablet:size-14 cursor-pointer" data-feather="x"></i>
     </div>
     <header id="header" class="bg-primary-dark border-b-2 border-secondary-dark text-primary-dark h-min">
       <div id="header-items" class="flex pt-4 justify-between">
@@ -11,32 +11,34 @@
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
-        <div class="m-0 md:m-auto text-secondary-dark">
+        <div class="m-0 tablet:m-auto text-secondary-dark">
           <a href="/">
             <img id="logo" src="../public/img/logo.png" alt="BitBuggy Logo" />
           </a>
         </div>
         <div id="header-nav-menu-items" class="flex text-secondary-dark items-center">
           <div id="user-icon" class="flex items-center hover:text-secondary-light">
-            <a href="/get-access" class=""><i data-feather="user" class="size-8 md:size-14"></i></a>
+            <a href="/signup" class="">
+              <i data-feather="user" class="size-8 tablet:size-14"></i>
+            </a>
           </div>
           <div class="hover:text-secondary-light">
-            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 md:size-14 cursor-pointer"></i>
-            <p id="shopping-count" class="text-lg md:text-2xl">0</p>
+            <i id="shopping-cart" data-feather="shopping-cart" class="size-8 tablet:size-14 cursor-pointer"></i>
+            <p id="shopping-count" class="text-lg tablet:text-2xl">0</p>
           </div>
         </div>
       </div>
       <form id="header-search-container" class="py-3 flex justify-center items-center" action="/products" method="GET">
-        <input class="rounded-md p-2 w-10/12 md:w-8/12" type="text" id="header-search-field" name="header-search-field"
-          placeholder="Search products">
+        <input class="rounded-md p-2 w-10/12 tablet:w-8/12" type="text" id="header-search-field"
+          name="header-search-field" placeholder="Search products">
         <button type="submit" onclick="findItems()"><i id="search-tool" data-feather="search"></i></button>
       </form>
     </header>
 
-    <nav id="nav" class="bg-secondary-dark flex md:text-2xl">
+    <nav id="nav" class="bg-secondary-dark flex tablet:text-2xl">
       <div class="flex flex-col py-4 bg-secondary-light text-primary">
         <div id="user-login" class="flex justify-end me-3">
-          <a href="/get-access">
+          <a href="/signin">
             <p class="self-center text-sm pe-2 cursor-pointer">Sign in</p>
           </a>
           <i data-feather="user"></i>
@@ -54,7 +56,8 @@
           <a href="/products"></a><i class="size-5 mx-2" data-feather="package"></i>Products</a>
         </li>
         <li class="nav-link-item flex m-4 cursor-pointer">
-          <a href="/get-access"></a><i class="size-5 mx-2" data-feather="user-check"></i>Become a Member</a>
+          <a href="/signup"><i class="size-5 mx-2" data-feather="user-check"></i></a><a href="/signup">Become a
+            Member</a>
         </li>
       </ul>
     </nav>
@@ -87,21 +90,21 @@
         <button
           class="cta-btn bg-primary text-secondary-light rounded-full px-10 py-4 mt-4 mx-auto text-center shadow-black border-secondary-dark tracking-wider">Sign
           up now!</button>
-        <div class=" cards-container flex flex-col md:flex-row justify-center items-center">
-          <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
+        <div class=" cards-container flex flex-col tablet:flex-row justify-center items-center">
+          <div class="card text-primary flex flex-col tablet:mx-10 justify-center items-center">
             <i data-feather="truck" class="size-14"></i>
             <h3 class="text-center text-3xl text-sans pt-4">FREE Shipping!</h3>
             <p class="text-xl m-5">Members take advantage of free shipping on all orders guaranteed to be
               delivered within 3
               days.</p>
           </div>
-          <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
+          <div class="card text-primary flex flex-col tablet:mx-10 justify-center items-center">
             <i data-feather="dollar-sign" class="size-14"></i>
             <h3 class="text-center text-3xl text-sans pt-4">Member's Deals</h3>
             <p class="text-xl m-5">Members also receive deep price cuts on in-demand products and first
               looks at new product selections.</p>
           </div>
-          <div class="card text-primary flex flex-col md:mx-10 justify-center items-center">
+          <div class="card text-primary flex flex-col tablet:mx-10 justify-center items-center">
             <i data-feather="star" class="size-14"></i>
             <h3 class="text-3xl text-sans pt-4">Rewards points</h3>
             <p class="text-xl text-center m-5">Members are automatically enrolled. Accumulate points toward discounts on

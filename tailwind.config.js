@@ -19,6 +19,12 @@ module.exports = {
 				},
 			},
 		},
+		screens: {
+			tablet: "640px",
+			laptop: "1024px",
+			desktop: "1280px",
+			tv: "1536px",
+		},
 	},
 	plugins: [],
 };

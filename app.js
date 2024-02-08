@@ -25,34 +25,42 @@ app.get("/", (req, res) => {
 	res.render("home");
 });
 
-app.get("/get-access", (req, res) => {
-	res.render("get-access");
+app.get("/signup", (req, res) => {
+	setTimeout(() => {
+		res.render("signup");
+	}, 700);
 });
 
 app.post("/signup", (req, res) => {
-// 	const sql = `INSERT INTO users
-//       (first_name, last_name, email, username, create_password, confirm_password)
-//     VALUES (
-// 		'${req.body.first_name}',
-// 		'${req.body.last_name}',
-// 		'${req.body.email}',
-// 		'${req.body.username}',
-// 		'${req.body.create_password}',
-// 		'${req.body.confirm_password}'
-// 		);`;
+	// 	const sql = `INSERT INTO users
+	//       (first_name, last_name, email, username, create_password, confirm_password)
+	//     VALUES (
+	// 		'${req.body.first_name}',
+	// 		'${req.body.last_name}',
+	// 		'${req.body.email}',
+	// 		'${req.body.username}',
+	// 		'${req.body.create_password}',
+	// 		'${req.body.confirm_password}'
+	// 		);`;
 
-// 	connection.query(sql, (err) => {
-// 		if (err) {
-// 			throw err;
-// 		}
-// 		console.log("query successful");
-// 	});
+	// 	connection.query(sql, (err) => {
+	// 		if (err) {
+	// 			throw err;
+	// 		}
+	// 		console.log("query successful");
+	// 	});
 
-	res.redirect('/signup-success');
+	res.redirect("/signup-success");
+});
+
+app.get("/signin", (req, res) => {
+	setTimeout(() => {
+		res.render('signin')
+	}, 700);
 });
 
 app.get('/signup-success', (req, res) => {
-	res.render('signup-success')
+	res.render("signup-success");
 })
 
 // app.post("/signin", (req, res) => {
