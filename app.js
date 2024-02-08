@@ -29,7 +29,7 @@ app.get("/get-access", (req, res) => {
 	res.render("get-access");
 });
 
-// app.post("/signup", (req, res) => {
+app.post("/signup", (req, res) => {
 // 	const sql = `INSERT INTO users
 //       (first_name, last_name, email, username, create_password, confirm_password)
 //     VALUES (
@@ -48,12 +48,12 @@ app.get("/get-access", (req, res) => {
 // 		console.log("query successful");
 // 	});
 
-// 	res.redirect('/signup-success');
-// });
+	res.redirect('/signup-success');
+});
 
-// app.get('/signup-success', (req, res) => {
-// 	res.render('signup-success')
-// })
+app.get('/signup-success', (req, res) => {
+	res.render('signup-success')
+})
 
 // app.post("/signin", (req, res) => {
 // 	res.send(req.body);
