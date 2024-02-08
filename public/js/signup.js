@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	/**SIGN-UP Form */
 
 	const verifyFormValues = () => {
+		// define variables
+		const regex = /\S+@\S+\.\S+/;
+		let isValid = true;
+
 		// get form values
 		const fname = document.getElementById("first-name").value.trim();
 		const lname = document.getElementById("last-name").value.trim();
@@ -78,15 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
 				.classList.add("input-error");
 			isValid = false;
 		}
+		if (!regex.test(email)) {
+			document.getElementById("email-error").textContent =
+				"Please correct your email address";
+			document.getElementById("email").classList.add("input-error");
+		}
 		return isValid;
-	};
-
-	const verifyEmail = (email) => {
-		const regex = /\S+@\S+\.\S+/;
-		document.getElementById("email-error").textContent =
-			"Please correct your email address";
-		document.getElementById("email").classList.add("input-error");
-		return regex.test(email);
 	};
 
 	signUpForm.addEventListener("submit", (event) => {
@@ -94,10 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		event.preventDefault();
 
 		if (verifyFormValues()) {
-			document.getElementById("signup-form").submit();
+			signUpForm.submit();
 			window.location.replace("/signup-success");
-		} else {
-			verifyEmail();
 		}
 	});
 });
